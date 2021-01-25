@@ -1,0 +1,7 @@
+Instruction for zMesh:
+
+1.Get the applications at http://davis.lbl.gov/Manuals/BISICLES-DOCS/index.html.
+2.Copy the files in AMR/filetool/ to the directory of $BISICLES/code/filetool/, and compile.
+3.Set the ZFP and SZ compressors and set the Makefile in AMR/repostitory/.
+4.Follow the scripts in AMR/repostitory/ for the results of MAC, CR, time overhead, etc. 
+5.We also provide the python scripts to plot the result figures. 
