@@ -82,9 +82,9 @@ int main(int argc, char **argv)
 	int *   recipe_hilbert_zmesh=malloc(datasize*sizeof(int));
 
 	get_zorder_encode_recipe(recipe_zorder,cnt,boxes,box_cnt);
-	get_zorder_zmesh_encode_recipe(data,recipe_zorder,cnt,boxes,box_cnt);
-	get_hilbert_encode_recipe(recipe_zorder,cnt,boxes,box_cnt);
-	get_hilbert_zmesh_encode_recipe(data,recipe_zorder,cnt,boxes,box_cnt);
+	get_zorder_zmesh_encode_recipe(data,recipe_zorder_zmesh,cnt,boxes,box_cnt);
+	get_hilbert_encode_recipe(recipe_hilbert,cnt,boxes,box_cnt);
+	get_hilbert_zmesh_encode_recipe(data,recipe_hilbert_zmesh,cnt,boxes,box_cnt);
 
 
 
