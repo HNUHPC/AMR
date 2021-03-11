@@ -485,8 +485,8 @@ void  get_zorder_encode_recipe(int *encode_recipe, int cnt [Level],struct box **
 		offset=0;
 		for(j=0;j<box_cnt[i];j++)
 		{
-			int side1=boxes[i][j].y2-boxes[i][j].y1;
-			int side2=boxes[i][j].x2-boxes[i][j].x1;
+			int side1=boxes[i][j].x2-boxes[i][j].x1;
+			int side2=boxes[i][j].y2-boxes[i][j].y1;
 			int z_size= EncodeMorton2(side1,side2)+1;
 			int *z_index=malloc(z_size*sizeof(int));
 			for(k=0;k<z_size;k++){
@@ -562,8 +562,8 @@ void get_zorder_zmesh_encode_recipe(struct datapoint **data,int *encode_recipe, 
 			recipe_de=malloc(cnt[i]*sizeof(int));
 		for(j=0;j<box_cnt[i];j++)
 		{
-			int side1=boxes[i][j].y2-boxes[i][j].y1;
-			int side2=boxes[i][j].x2-boxes[i][j].x1;
+			int side1=boxes[i][j].x2-boxes[i][j].x1;
+			int side2=boxes[i][j].y2-boxes[i][j].y1;
 			int z_size= EncodeMorton2(side1,side2)+1;
 			int *z_index=malloc(z_size*sizeof(int));
 			for(k=0;k<z_size;k++){
@@ -690,8 +690,8 @@ void  get_hilbert_encode_recipe(int * encode_recipe, int cnt [Level],struct box 
 		offset=0;
 		for(j=0;j<box_cnt[i];j++)
 		{
-			int side1=boxes[i][j].y2-boxes[i][j].y1;
-			int side2=boxes[i][j].x2-boxes[i][j].x1;
+			int side1=boxes[i][j].x2-boxes[i][j].x1;
+			int side2=boxes[i][j].y2-boxes[i][j].y1;
 			int n=1;
 			while(n<=side1||n<=side2){n=n<<1;}
 			int z_size= n*n;
@@ -771,8 +771,8 @@ void get_hilbert_zmesh_encode_recipe(struct datapoint **data,int *encode_recipe,
 		for(j=0;j<box_cnt[i];j++)
 		{
 
-			int side1=boxes[i][j].y2-boxes[i][j].y1;
-			int side2=boxes[i][j].x2-boxes[i][j].x1;
+			int side1=boxes[i][j].x2-boxes[i][j].x1;
+			int side2=boxes[i][j].y2-boxes[i][j].y1;
 			int n=1;
 			while(n<=side1||n<=side2){n=n<<1;}
 			int z_size= n*n;

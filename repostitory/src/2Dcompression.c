@@ -72,8 +72,8 @@ int main(int argc, char **argv)
 
 
 
-	get_zorder_encode_recipe(recipe_en_levelRe,cnt,boxes,box_cnt);
-	get_zorder_zmesh_encode_recipe(data, recipe_en_baseline,cnt,boxes,box_cnt);
+	get_zorder_encode_recipe(recipe_en_baseline,cnt,boxes,box_cnt);
+	get_zorder_zmesh_encode_recipe(data, recipe_en_levelRe,cnt,boxes,box_cnt);
 
 
 
@@ -164,7 +164,7 @@ int main(int argc, char **argv)
 			compressedsize_levelRe=zfp2_compress(data_levelRe,nx,ny,Errbound); 
 			if(datasize>nx*ny)
 				compressedsize_levelRe+=zfp1_compress(data_levelRe+nx*ny,datasize-nx*ny,Errbound);
-		        printf("%lf\n",fullsize/compressedsize);
+		        //printf("%lf\n",fullsize/compressedsize);
 			printf("%lf\n",fullsize/compressedsize_baseline);
 			printf("%lf\n",fullsize/compressedsize_levelRe);
 		}
@@ -211,7 +211,7 @@ int main(int argc, char **argv)
 				free(compressed);
 				compressedsize_levelRe+=outSize;
 			}
-			printf("%lf\n",fullsize/compressedsize);
+			//printf("%lf\n",fullsize/compressedsize);
 			printf("%lf\n",fullsize/compressedsize_baseline);
 			printf("%lf\n",fullsize/compressedsize_levelRe);
 		}
