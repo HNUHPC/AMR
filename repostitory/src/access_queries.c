@@ -390,8 +390,8 @@ struct node_storage * leveldata_box_hilbert(struct datapoint **data, int cnt [Le
 		offset=0;
 		for(j=0;j<box_cnt[i];j++)
 		{
-			int a=boxes[i][j].y2-boxes[i][j].y1;
-			int b=boxes[i][j].x2-boxes[i][j].x1;
+			int a=boxes[i][j].x2-boxes[i][j].x1;
+			int b=boxes[i][j].y2-boxes[i][j].y1;
 			int n=1;
 			while(n<=a||n<=b){n=n<<1;}
 			int z_size= n*n;
@@ -495,8 +495,8 @@ struct node_storage* leveldata_box_level_hilbert(struct datapoint **data, int cn
 		offset=0;
 		for(j=0;j<box_cnt[i];j++)
 		{
-			int a=boxes[i][j].y2-boxes[i][j].y1;
-			int b=boxes[i][j].x2-boxes[i][j].x1;
+			int a=boxes[i][j].x2-boxes[i][j].x1;
+			int b=boxes[i][j].y2-boxes[i][j].y1;
 			int n=1;
 			while(n<=a||n<=b){n=n<<1;}
 			int z_size= n*n;
@@ -636,8 +636,8 @@ struct node_storage * leveldata_box(struct datapoint **data, int cnt [Level],str
 		offset=0;
 		for(j=0;j<box_cnt[i];j++)
 		{
-			int a=boxes[i][j].y2-boxes[i][j].y1;
-			int b=boxes[i][j].x2-boxes[i][j].x1;
+			int b=boxes[i][j].y2-boxes[i][j].y1;
+			int a=boxes[i][j].x2-boxes[i][j].x1;
 			int z_size= EncodeMorton2(a,b)+1;
 			//printf("%d,%d,%d\n",a,b,z_size);
 			int *z_index=malloc(z_size*sizeof(int));
@@ -740,8 +740,8 @@ struct node_storage* leveldata_box_level(struct datapoint **data, int cnt [Level
 		offset=0;
 		for(j=0;j<box_cnt[i];j++)
 		{
-			int a=boxes[i][j].y2-boxes[i][j].y1;
-			int b=boxes[i][j].x2-boxes[i][j].x1;
+			int a=boxes[i][j].x2-boxes[i][j].x1;
+			int b=boxes[i][j].y2-boxes[i][j].y1;
 			int z_size= EncodeMorton2(a,b)+1;
 			//printf("%d,%d,%d\n",a,b,z_size);
 			int *z_index=malloc(z_size*sizeof(int));
