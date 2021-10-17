@@ -1,5 +1,5 @@
 GFORTRAN    = gfortran -Wall
-CC          = gcc -O3 -g
+CC          = gcc -O3 -g -std=c99
 #CC          = gcc -g
 MPI_FORTRAN = mpif90 -Wall
 MPI_CC      = mpicc 
@@ -7,7 +7,7 @@ LD = -lm
 
 .SUFFIXES : .o .c
 
-Target:=reordering access_queries overhead_all overhead_zorder overhead_hilbert 2Dcompression interpolate 
+Target:=hilbert_parallel distance fetches_num 
 
 all: $(Target)
 
